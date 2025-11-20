@@ -1,0 +1,111 @@
+[
+  {
+    "title": "Narra",
+    "lat": 8.1575,
+    "lng": 125.1276,
+    "img": "images/narra.jpg",
+    "description": "The National Tree of the Philippines, commonly found in Bukidnon plantation areas and farmlands.",
+    "medicinal": "Bark decoction used for skin infections.",
+    "category": "Native Tree"
+  },
+  {
+    "title": "Molave",
+    "lat": 8.2945,
+    "lng": 125.0101,
+    "img": "images/molave.jpg",
+    "description": "A durable hardwood tree abundant in Malaybalay and Valencia’s dry upland areas.",
+    "medicinal": "Leaves boiled for fever and headaches.",
+    "category": "Native Tree"
+  },
+  {
+    "title": "Red Lauan",
+    "lat": 8.2432,
+    "lng": 125.0553,
+    "img": "images/red_lauan.jpg",
+    "description": "A dipterocarp species found in the Mt. Kitanglad Range Natural Park.",
+    "medicinal": "Resin traditionally used to seal wounds.",
+    "category": "Native Tree"
+  },
+  {
+    "title": "White Lauan",
+    "lat": 8.2781,
+    "lng": 125.0213,
+    "img": "images/white_lauan.jpg",
+    "description": "Common in Bukidnon’s high-elevation forests such as Mt. Kitanglad and Mt. Kalatungan.",
+    "medicinal": "Resin used as natural antiseptic.",
+    "category": "Endemic Tree"
+  },
+  {
+    "title": "Yakal",
+    "lat": 8.1521,
+    "lng": 124.9462,
+    "img": "images/yakal.jpg",
+    "description": "A slow-growing hardwood tree occasionally found in Bukidnon’s southern forests.",
+    "medicinal": "Bark used for skin ailments.",
+    "category": "Native Tree"
+  },
+  {
+    "title": "Mangkono (Philippine Ironwood)",
+    "lat": 8.4105,
+    "lng": 125.0344,
+    "img": "images/mangkono.jpg",
+    "description": "Rare in Bukidnon but can be found in protected mountain areas.",
+    "medicinal": "Decoction used for treating fatigue.",
+    "category": "Native Tree"
+  },
+  {
+    "title": "Kamagong",
+    "lat": 8.1045,
+    "lng": 125.1523,
+    "img": "images/kamagong.jpg",
+    "description": "A Philippine ebony tree growing in patches of secondary forests in Malaybalay.",
+    "medicinal": "Fruit used for diarrhea treatment.",
+    "category": "Native Tree"
+  },
+  {
+    "title": "Banaba",
+    "lat": 7.9991,
+    "lng": 125.2094,
+    "img": "images/banaba.jpg",
+    "description": "A medicinal tree along rivers and roadsides in Valencia and Quezon.",
+    "medicinal": "Leaves used for diabetes, kidney cleansing.",
+    "category": "Medicinal Tree"
+  },
+  {
+    "title": "Lagundi",
+    "lat": 8.0611,
+    "lng": 124.9281,
+    "img": "images/lagundi.jpg",
+    "description": "Common in farm edges across Bukidnon.",
+    "medicinal": "Used for cough, asthma, and colds.",
+    "category": "Medicinal Tree"
+  },
+  {
+    "title": "Mindanao Cinnamon",
+    "lat": 8.2261,
+    "lng": 125.0239,
+    "img": "images/mindanao_cinnamon.jpg",
+    "description": "An endemic cinnamon species found in Lantapan and Kitanglad forests.",
+    "medicinal": "Bark used for stomachache and flu.",
+    "category": "Endemic Tree"
+  },
+  {
+    "title": "Mindanao Rainbow Gum",
+    "lat": 8.1023,
+    "lng": 125.3011,
+    "img": "images/rainbow_gum.jpg",
+    "description": "The colorful rainbow eucalyptus growing in Bukidnon plantations and moist areas.",
+    "medicinal": "Leaves used for decongestant.",
+    "category": "Endemic Tree"
+  },
+  {
+    "title": "Balete",
+    "lat": 8.5491,
+    "lng": 125.0034,
+    "img": "images/balete.jpg",
+    "description": "Large fig tree found throughout Bukidnon lowlands and communities.",
+    "medicinal": "Sap and leaves used for fungal infections.",
+    "category": "Medicinal Tree"
+  }
+]
+
