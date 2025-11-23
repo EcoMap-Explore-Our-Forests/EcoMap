@@ -1,110 +1,202 @@
 [
   {
     "title": "Narra",
+    "scientific": "Pterocarpus indicus",
     "lat": 8.1575,
     "lng": 125.1280,
-    "img": "images/narra.jpg",
+    "img": "https://i.pinimg.com/736x/a5/6a/d4/a56ad439727544091ea094516afbe5ae.jpg",
     "description": "The National Tree of the Philippines, commonly found in Bukidnon plantations and farmlands.",
     "medicinal": "Bark decoction used for skin infections.",
     "category": "Native Tree"
   },
   {
     "title": "Molave",
+    "scientific": "Vitex parviflora",
     "lat": 8.025746,
     "lng": 124.987985,
-    "img": "images/molave.jpg",
-    "description": "A durable hardwood tree abundant in the upland and plantation areas of Lantapan and nearby municipalities.",
+    "img": "https://hanapphonline.com/wp-content/uploads/2024/06/Molave-Tree.jpg",
+    "description": "A durable hardwood tree abundant in the upland and plantation areas of Lantapan.",
     "medicinal": "Leaves boiled for fever and headaches.",
     "category": "Native Tree"
   },
   {
     "title": "Red Lauan",
+    "scientific": "Shorea negrosensis",
     "lat": 8.139695,
     "lng": 124.916468,
-    "img": "images/red_lauan.jpg",
+    "img": "https://imgs.search.brave.com/3DpENwbjnegtYILlrVL5tn99Eoxk5ArENV4TEFe5gqs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9mb3N0/ZXJpbmdlZHVjYXRp/b25hbmRlbnZpcm9u/bWVudGZvcmRldmVs/b3BtZW50LmZpbGVz/LndvcmRwcmVzcy5j/b20vMjAxNi8xMC9y/ZWQtbGF1YW4uanBn/P3c9NjAyJmg9OTAz",
     "description": "A dipterocarp species found in the Mt. Kitanglad Range Natural Park.",
     "medicinal": "Resin traditionally used to seal wounds.",
     "category": "Native Tree"
   },
   {
     "title": "White Lauan",
+    "scientific": "Shorea contorta",
     "lat": 7.953000,
     "lng": 124.801500,
-    "img": "images/white_lauan.jpg",
-    "description": "Found in high-elevation forests such as Mt. Kalatungan and adjacent ranges.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/8/8a/White_Seraya_%28Parashorea_malaanonan%29_%28Dipterocarpaceae%29_%288080071153%29.jpg",
+    "description": "Found in high-elevation forests such as Mt. Kalatungan.",
     "medicinal": "Resin used as natural antiseptic.",
     "category": "Endemic Tree"
   },
   {
-    "title": "Yakal",
+    "title": "Yakal-malibato",
+    "scientific": "Shorea malibato",
     "lat": 7.760867,
     "lng": 125.003607,
-    "img": "images/yakal.jpg",
-    "description": "A slow-growing hardwood species occasionally found in southern Bukidnon forests (Maramag area).",
+    "img": "https://imgs.search.brave.com/kTKoePPPMszv2wGtmwpM-NAenJF2vDUNinaJ2NGGokU/rs:fit:860:0:0:0/g:ce/aHR0cDovL2Jpbmhp/LnBoL3dwLWNvbnRl/bnQvdXBsb2Fkcy8y/MDIyLzA2L3lha2Fs/bWFsaWJhdG90cnVu/a2NhbWFyaW5lc0lN/R184Mjk0LXNjYWxl/ZC5qcGc",
+    "description": "A slow-growing hardwood species found in southern Bukidnon forests.",
     "medicinal": "Bark used for skin ailments.",
     "category": "Native Tree"
   },
   {
     "title": "Mangkono (Philippine Ironwood)",
+    "scientific": "Xanthostemon verdugonianus",
     "lat": 8.366700,
     "lng": 124.866700,
-    "img": "images/mangkono.jpg",
-    "description": "Rare ironwood that can occur in protected mountain areas around Manolo Fortich and northern Bukidnon ranges.",
+    "img": "https://uforest.org/plants/images/xanthostemon_verdugonianus1.jpg",
+    "description": "Rare ironwood in protected mountain areas of northern Bukidnon.",
     "medicinal": "Decoction used for treating fatigue.",
     "category": "Native Tree"
   },
   {
     "title": "Kamagong",
+    "scientific": "Diospyros blancoi",
     "lat": 8.095000,
     "lng": 125.149800,
-    "img": "images/kamagong.jpg",
-    "description": "Philippine ebony growing in secondary and lowland forest patches near Malaybalay/Valencia corridors.",
+    "img": "https://i.pinimg.com/736x/10/a0/80/10a080ff3c754c1b55bdc1228335b93a.jpg",
+    "description": "Philippine ebony in secondary forests near Malaybalay/Valencia.",
     "medicinal": "Fruit used for diarrhea treatment.",
     "category": "Native Tree"
   },
   {
     "title": "Banaba",
+    "scientific": "Lagerstroemia speciosa",
     "lat": 7.997500,
     "lng": 125.200700,
-    "img": "images/banaba.jpg",
-    "description": "A medicinal tree commonly found along rivers and roadsides in Valencia and nearby Quezon municipality.",
+    "img": "https://imgs.search.brave.com/_0c7S2TVk631M4pd1ZBWpiwOiNSkJ57H53IpGMsR2zw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9uYXR1/cmFzYW5hdml0LmZp/bGVzLndvcmRwcmVz/cy5jb20vMjAyMC8w/NS82OTFkNC1iYW5h/YmEuanBn",
+    "description": "A medicinal tree found along rivers and roadsides.",
     "medicinal": "Leaves used for diabetes and kidney cleansing.",
-    "category": "Medicinal Tree"
+    "category": "Native Tree"
   },
   {
     "title": "Lagundi",
+    "scientific": "Vitex negundo",
     "lat": 8.060400,
     "lng": 124.938100,
-    "img": "images/lagundi.jpg",
-    "description": "A common medicinal shrub/tree occurring on farm edges and secondary growth across Bukidnon.",
+    "img": "https://imgs.search.brave.com/gc_qMjnX4obHghPw8jB3zp6u1mZK2RuMIWfDyL0YJsU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi92aXRl/eC1uZWd1bmRvLW5p/cmd1bmRpLXBsYW50/cy12aXRleC1uZWd1/bmRvLW5pcmd1bmRp/LXBsYW50cy1zLW90/aGVyLW5hbWUtY2hp/bmVzZS1jaGFzdGUt/dHJlZS0tZml2ZS1s/ZWF2ZWQtY2hhc3Rl/LXRyZWUtMTkwNjI5/NDU0LmpwZw",
+    "description": "Common medicinal shrub/tree found across Bukidnon.",
     "medicinal": "Used for cough, asthma, and colds.",
-    "category": "Medicinal Tree"
+    "category": "Native Tree"
   },
   {
-    "title": "Mindanao Cinnamon",
+    "title": "Cinchona Tree",
+    "scientific": "Cinchona pubescens",
     "lat": 8.227900,
     "lng": 125.028300,
-    "img": "images/mindanao_cinnamon.jpg",
-    "description": "An endemic cinnamon species found in upland forest patches around Lantapan and Kitanglad foothills.",
+    "img": "https://imgs.search.brave.com/5d-sN2bTY7vVOw4WXHmqa_fgCxt4FQcYVCprlWrmBEE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/bnliZy5vcmcvcG9l/dGljLWJvdGFueS9j/aW5jaG9uYS9pbWFn/ZXMvY2luY2hvbmEy/MDEzLmpwZw",
+    "description": "Endemic cinnamon species in Lantapan and Kitanglad foothills.",
     "medicinal": "Bark used for stomachache and flu.",
     "category": "Endemic Tree"
   },
   {
     "title": "Mindanao Rainbow Gum",
+    "scientific": "Eucalyptus deglupta",
     "lat": 8.103300,
     "lng": 125.300100,
-    "img": "images/rainbow_gum.jpg",
-    "description": "Rainbow eucalyptus found in moist plantation sites and riparian strips in eastern Bukidnon zones.",
+    "img": "https://imgs.search.brave.com/lcaKo8CIrpHmGnBFEZ3a-Ux3XTasr6Aw_tR9rDx4Ps8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLmV0/c3lzdGF0aWMuY29t/LzE5MjcxODQ5L3Iv/aWwvNGZkNzQ5LzM3/NDk2NzEwOTIvaWxf/NjAweDYwMC4zNzQ5/NjcxMDkyX3N3YmIu/anBn",
+    "description": "Rainbow eucalyptus found in moist plantation sites.",
     "medicinal": "Leaves used as a decongestant.",
     "category": "Endemic Tree"
   },
   {
     "title": "Balete",
+    "scientific": "Ficus benjamina",
     "lat": 7.760000,
     "lng": 125.005000,
-    "img": "images/balete.jpg",
-    "description": "Large fig species present in lowland and riparian areas across Bukidnon (Maramag/Kitaotao corridor).",
+    "img": "https://imgs.search.brave.com/YRSnvyiQd5tWnytkgVXYUE1jIEYlqkykpsDHVo90bhg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnJl/ZGQuaXQvdHMyNGhy/eDFsZzk4MS5qcGc",
+    "description": "Large fig species in lowland and riparian areas.",
     "medicinal": "Sap and leaves used for fungal infections.",
-    "category": "Medicinal Tree"
+    "category": "Endemic Tree"
+  },
+  {
+    "title": "Ilang-Ilang",
+    "scientific": "Cananga odorata",
+    "lat": 8.120000,
+    "lng": 125.150000,
+    "img": "https://balconygardenweb.b-cdn.net/wp-content/uploads/2015/04/Cananga-odorata-fg.jpg",
+    "description": "A fragrant tree in tropical forests and gardens.",
+    "medicinal": "Flowers used in aromatherapy.",
+    "category": "Endemic Tree"
+  },
+  {
+    "title": "Almaciga",
+    "scientific": "Agathis philippinensis",
+    "lat": 8.2001,
+    "lng": 124.8503,
+    "img": "https://i.pinimg.com/1200x/0f/ba/44/0fba4479098808386b2c1bac1bcd05d9.jpg",
+    "description": "Native conifer producing valuable resin.",
+    "medicinal": "Resin used for coughs and wound sealing.",
+    "category": "Native Tree"
+  },
+  {
+    "title": "Katmon",
+    "scientific": "Dillenia philippinensis",
+    "lat": 8.2901,
+    "lng": 125.0302,
+    "img": "https://i.pinimg.com/736x/d2/50/13/d25013ed497973061eff71f27c704ca8.jpg",
+    "description": "Wide-leaf native tree with edible fruit.",
+    "medicinal": "Fruit used for coughs.",
+    "category": "Native Tree"
+  },
+  {
+    "title": "Malak-Malak",
+    "scientific": "Palaquium philippense",
+    "lat": 8.3502,
+    "lng": 124.8804,
+    "img": "https://imgs.search.brave.com/ONGYVRJ4P-mzS3FTRpVrKwbK55dh1Z3yyDWdALLXobI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9saDMu/Z29vZ2xldXNlcmNv/bnRlbnQuY29tL2Qv/MVEtZVRFYjFMdXZs/dzVBZkZITlJnM3lI/dlh2YXZmdEct",
+    "description": "a tall forest tree, reaching heights of about 25 meters and diameters of approximately 80 centimeters.",
+    "medicinal": "Latex applied for skin conditions.",
+    "category": "Native Tree"
+  },
+  {
+    "title": "Kalingag",
+    "scientific": "Cinnamomum mercadoi",
+    "lat": 8.2600,
+    "lng": 125.0900,
+    "img": "https://imgs.search.brave.com/9OSIh_p6zkCgt892aBMOnBBv-dMR1G4jYd2FgrqFdr0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9ob21l/b3JnYW5pY3BoLndv/cmRwcmVzcy5jb20v/d3AtY29udGVudC91/cGxvYWRzLzIwMTcv/MDcva2FsaW5nYWct/bmlhbi5qcGc_dz02/MTY",
+    "description": " It is a small tree, typically 6 to 10 meters high, with thick, aromatic bark and smooth, pale green leaves that are 8 to 20 centimeters long.",
+    "medicinal": "Bark used for colds.",
+    "category": "Endemic Tree"
+  },
+  {
+    "title": "Gmelina arborea",
+    "scientific": "Gmelina arborea",
+    "lat": 8.0500,
+    "lng": 125.2604,
+    "img": "https://imgs.search.brave.com/5twfvS9RpKSRfVX2THhKWU1m0AJzg9C2zbg1OqXCeTw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90cm9w/aWNhbC50aGVmZXJu/cy5pbmZvL3BsYW50/aW1hZ2VzL3NpemVk/LzAvZi8wZmRjYjBk/NjBiNGNjNzM1OTU2/OWVkN2E5MTY0MDVm/YjlkMzIxMDBhXzMw/MHB4LmpwZw",
+    "description": " it is particularly associated with the province of Bukidnon, where it is found in areas such as the Musuan region.",
+    "medicinal": "Leaves used for inflammation.",
+    "category": "Native Tree"
+  },
+  {
+    "title": "Bangkal",
+    "scientific": "Nauclea orientalis",
+    "lat": 8.3400,
+    "lng": 124.9910,
+    "img": "https://imgs.search.brave.com/uMjjtWpxJssJNQSTl2_6gmTdwrQ5Cp2kPlBrjzKhqow/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90cm9w/aWNhbC50aGVmZXJu/cy5pbmZvL3BsYW50/aW1hZ2VzL3NpemVk/L2QvMi9kMjA0MGUy/ZTg2YzYwYjZlOTc3/N2I1YmE2Yzk2ZmEz/MTA0ZmY3NzAyXzMw/MHB4LmpwZw",
+    "description": "part of the local flora and has been studied in the context of plantation ecosystems.",
+    "medicinal": "Bark used for skin diseases.",
+    "category": "Native Tree"
+  },
+  {
+    "title": "Calamus ornatus (Rattan Palm)",
+    "scientific": "Calamus ornatus",
+    "lat": 8.3301,
+    "lng": 125.0500,
+    "img": "https://i.pinimg.com/736x/a0/b1/3e/a0b13e4e2d3a4ed9bf8c01bd1272e8a4.jpg",
+    "description": "Woody climbing palm common in forests.",
+    "medicinal": "Stem sap used as tonic.",
+    "category": "Native Tree"
   }
 ]

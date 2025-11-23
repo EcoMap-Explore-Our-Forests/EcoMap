@@ -12,12 +12,18 @@
 
     <!-- Make sure you put this AFTER Leaflet's CSS -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" 
-        crossorigin=""></script>
-    
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
     <style>
-        #map { height: 570px; width: 100%; }
-        .popup-image { max-width: 200px; height: auto; }
+        #map {
+            height: 570px;
+            width: 100%;
+        }
+
+        .popup-image {
+            max-width: 200px;
+            height: auto;
+        }
 
         /* Simple search bar (NO external CSS) */
         #search-container {
@@ -40,67 +46,79 @@
     <h1>Eco Map</h1>
 
     <div id="search-container">
-        <input type="text" id="searchBar" placeholder="Search for tree species..."></div>
+        <input type="text" id="searchBar" placeholder="Search for tree species...">
+    </div>
 
-         <div id="map"></div>
+    <div id="map"></div>
 
-<script>
-function initMap(mapDataUrl){
-    const map = L.map('map').setView([8.2,125.1], 9);
+    <script>
+        function initMap(mapDataUrl) {
 
-    //Ang base layer
-     const openStreetMap = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 19,
-        attribution: '&copy; OpenStreetMap contributors'
-    });
+            const map = L.map('map').setView([8.2, 125.1], 9);
 
-     const satellite = L.tileLayer(
-        'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
-        { attribution: 'Tiles © Esri | Maxar | Earthstar Geographics' }
-    );
+            //Ang base layer
+            const openStreetMap = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+                attribution: '&copy; OpenStreetMap contributors'
+            }).addTo(map);
 
-    openStreetMap.addTo(map);
+            const satellite = L.tileLayer(
+                'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+                { attribution: 'Tiles © Esri | Maxar | Earthstar Geographics' }
+            );
 
-    let markers = []; //i store ang marker kada search
+            openStreetMap.addTo(map);
 
-    fetch(mapDataUrl)
-        .then(res => res.json())
-        .them(data => {
-            data.forEach(pin => {
-                const marker = L.marker ([Ipin.lat, pin.lng]).addTo(map);
+            let markers = []; //i store ang marker kada search
 
-                const img = `<img src='${pin.img}' class="popup-image">`;
-                marker.bindPopup(
-                    `${img}<br><b>${pin.title}</b><br>${pin.description}<br>${pin.category}`
-                );
+            fetch(mapDataUrl)
+                .then(res => res.json())
+                .then(data => {
+                    data.forEach(pin => {
+                        const marker = L.marker([pin.lat, pin.lng]).addTo(map);
 
-                 markers.push({ title: pin.title.toLowerCase(), marker });
+                        const img = `<img src='${pin.img}' class="popup-image">`;
+                        
+                        marker.bindPopup(
+                            `${img}<br>
+                            <b>${pin.title}</b>
+                            <br>${pin.scientific}<br>
+                            <b>Description:</b> ${pin.description}<br>
+                            <b>Medicinal Uses:</b> ${pin.medicinal}<br>
+                            <i>${pin.category}</i>`
+                        );
+
+                        markers.push({ title: pin.title.toLowerCase(), marker });
+                    });
+
+                    //Switch sa Base layer
+                    L.control.layers(
+                        { "OpenStreetMap": openStreetMap, "Satellite": satellite },
+                        {},
+                        { collapsed: false }
+                    ).addTo(map);
+                });
+
+            document.getElementById("searchBar").addEventListener("keyup", function () {
+                const text = this.value.toLowerCase().trim();
+
+                markers.forEach(obj => {
+                    if (obj.title.startsWith(text)) {
+                        obj.marker.setOpacity(1);
+                        obj.marker.openPopup();
+                    } else {
+                        obj.marker.setOpacity(0);
+                    }
+
+                });
             });
-
-            //Switch sa Base layer
-            L.control.layers(
-              { "OpenStreetMap": openStreetMap, "Satellite": satellite },
-                {},
-                { collapsed: false }
-            ).addTo(map);
-        });
-
-    document.getElementById("searchBar").addEventListener("keyup", function(){
-        const text = this.value.toLowerCase();
-
-        markers.forEach(obj => {
-            if(obj.title.includes(text)) {
-                obj.marker.setOpacity(1);
-                obj.marker.openPop
-
-            }else
-
         }
 
+        document.addEventListener("DOMContentLoaded", function () {
+            initMap("eco-map.json");
+        });
 
-    });
-
-</script>
+    </script>
 </body>
 
 </html>
