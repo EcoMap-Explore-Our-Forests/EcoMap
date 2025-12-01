@@ -14,6 +14,9 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+     
     <style>
         #map {
             height: 570px;
@@ -39,6 +42,17 @@
             border: 1px solid #aaa;
             border-radius: 6px;
         }
+
+        .native-label {
+    color: green;
+    font-weight: bold;
+}
+
+.endemic-label {
+    color: orange;
+    font-weight: bold;
+}
+
     </style>
 </head>
 
@@ -78,6 +92,20 @@
                         const marker = L.marker([pin.lat, pin.lng]).addTo(map);
 
                         const img = `<img src='${pin.img}' class="popup-image">`;
+
+                        const categoryClass = pin.category.toLowerCase().includes("native")
+    ? "native-label"
+    : "endemic-label";
+
+marker.bindPopup(
+    `${img}<br>
+    <b>${pin.title}</b>
+    <br>${pin.scientific}<br>
+    <b>Description:</b> ${pin.description}<br>
+    <b>Medicinal Uses:</b> ${pin.medicinal}<br>
+    <span class="${categoryClass}">${pin.category}</span>`
+);
+
                         
                         marker.bindPopup(
                             `${img}<br>
