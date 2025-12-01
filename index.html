@@ -14,6 +14,8 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
+    <link rel="stylesheet" href="style.css">
+
     <style>
         #map {
             height: 570px;
@@ -43,7 +45,11 @@
 </head>
 
 <body>
-    <h1>Eco Map</h1>
+
+     <header class="main-header">
+        <img src="ecomapLogo.png" alt="Eco Map Logo" class="logo">
+        <h1>Eco Map</h1>
+    </header>
 
     <div id="search-container">
         <input type="text" id="searchBar" placeholder="Search for tree species...">
@@ -87,6 +93,21 @@
                             <b>Medicinal Uses:</b> ${pin.medicinal}<br>
                             <i>${pin.category}</i>`
                         );
+
+                        marker.on("click", () => {
+                            map.setView([pin.lat, pin.lng], 14, { animate: true});
+
+                            setTimeout(() => {
+                                const popup = marker.getPopup();
+
+                                const popupHeight = popup._container.offsetHeight;
+
+                                map.panBy([0, -(popupHeight / 2)],
+                                    { animate: true,
+                                     duration: 0.3
+                                    });
+                            }, 200);
+                        });
 
                         markers.push({ title: pin.title.toLowerCase(), marker });
                     });
