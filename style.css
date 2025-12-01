@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 /* ===== GENERAL RESET ===== */
+=======
+>>>>>>> 7cc42d2700e142001826857527cca1fe2656f176
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +9,10 @@
     font-family: Arial, sans-serif;
 }
 
+<<<<<<< HEAD
 /* ===== HEADER STYLING ===== */
+=======
+>>>>>>> 7cc42d2700e142001826857527cca1fe2656f176
 .main-header {
     display: flex;
     align-items: center;
@@ -17,7 +23,10 @@
     position: relative;
 }
 
+<<<<<<< HEAD
 /* Logo stays on the left */
+=======
+>>>>>>> 7cc42d2700e142001826857527cca1fe2656f176
 .logo {
     height: 95px;
     width: 95px;
@@ -26,14 +35,20 @@
     left: 20px;
 }
 
+<<<<<<< HEAD
 /* Website Title */
+=======
+>>>>>>> 7cc42d2700e142001826857527cca1fe2656f176
 .main-header h1 {
     font-size: 32px;
     font-weight: bold;
     color: white;
 }
 
+<<<<<<< HEAD
 /* ===== MAIN CONTENT ===== */
+=======
+>>>>>>> 7cc42d2700e142001826857527cca1fe2656f176
 main {
     padding: 20px;
 }
