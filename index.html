@@ -14,11 +14,48 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    
     <link rel="stylesheet" href="style.css">
     
-    <!-- Bootstrap 5.3.8 -->
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">   
+    <style>
+        #map {
+            height: 570px;
+            width: 100%;
+        }
 
+        .popup-image {
+            max-width: 200px;
+            height: auto;
+        }
+
+        /* Simple search bar (NO external CSS) */
+        #search-container {
+            width: 100%;
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        #searchBar {
+            padding: 7px 13px;
+            width: 260px;
+            font-size: 16px;
+            border: 1px solid #aaa;
+            border-radius: 6px;
+        }
+
+        .native-label {
+    color: green;
+    font-weight: bold;
+}
+
+.endemic-label {
+    color: orange;
+    font-weight: bold;
+}
+
+    </style>
 </head>
 
 <body>
