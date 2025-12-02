@@ -15,33 +15,10 @@
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Bootstrap 5.3.8 -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">   
 
-    <style>
-        #map {
-            height: 570px;
-            width: 100%;
-        }
-
-        .popup-image {
-            max-width: 200px;
-            height: auto;
-        }
-
-        /* Simple search bar (NO external CSS) */
-        #search-container {
-            width: 100%;
-            text-align: center;
-            margin: 10px 0;
-        }
-
-        #searchBar {
-            padding: 7px 13px;
-            width: 260px;
-            font-size: 16px;
-            border: 1px solid #aaa;
-            border-radius: 6px;
-        }
-    </style>
 </head>
 
 <body>
@@ -51,93 +28,150 @@
         <h1>Eco Map</h1>
     </header>
 
-    <div id="search-container">
-        <input type="text" id="searchBar" placeholder="Search for tree species...">
+    <div class="container-fluid mt-2">
+        <div class="row">
+
+            <!-- LEFT PANEL: SEARCH + TREE LIST -->
+            <div class="col-12 col-md-3">
+
+                <!-- Search Bar -->
+                <div class="mb-3">
+                    <input type="text" id="searchBar" class="form-control" placeholder="Search tree name...">
+                </div>
+
+                <!-- Tree List -->
+                <div class="card">
+                    <div class="card-header text-center">
+                        <strong>List of Trees</strong>
+                    </div>
+
+                    <ul class="list-group tree-list" id="treeList">
+
+                    <!-- FILTER BUTTONS -->
+                    <div class="btn-group w-100 mb-2" role="group">
+                        <button class="btn btn-success" id="filterAll">All</button>
+                        <button class="btn btn-outline-success" id="filterNative">Native</button>
+                        <button class="btn btn-outline-success" id="filterEndemic">Endemic</button>
+                    </div>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- RIGHT PANEL NGA MAP -->
+            <div class="col-12 col-md-9">
+                <div id="map"></div>
+            </div>
+        </div>
     </div>
 
-    <div id="map"></div>
-
     <script>
-        function initMap(mapDataUrl) {
+    function initMap(mapDataUrl) {
 
-            const map = L.map('map').setView([8.2, 125.1], 9);
+        const map = L.map('map').setView([8.2, 125.1], 9);
 
-            //Ang base layer
-            const openStreetMap = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                maxZoom: 19,
-                attribution: '&copy; OpenStreetMap contributors'
-            }).addTo(map);
+        const openStreetMap = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
 
-            const satellite = L.tileLayer(
-                'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
-                { attribution: 'Tiles © Esri | Maxar | Earthstar Geographics' }
-            );
+        const satellite = L.tileLayer(
+            'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+            { attribution: 'Tiles © Esri | Maxar | Earthstar Geographics' }
+        );
 
-            openStreetMap.addTo(map);
+        let markers = [];
+        let treeData = [];
 
-            let markers = []; //i store ang marker kada search
+        const treeList = document.getElementById("treeList");
+        const searchBar = document.getElementById("searchBar");
 
-            fetch(mapDataUrl)
-                .then(res => res.json())
-                .then(data => {
-                    data.forEach(pin => {
-                        const marker = L.marker([pin.lat, pin.lng]).addTo(map);
+        fetch(mapDataUrl)
+            .then(res => res.json())
+            .then(data => {
 
-                        const img = `<img src='${pin.img}' class="popup-image">`;
-                        
-                        marker.bindPopup(
-                            `${img}<br>
-                            <b>${pin.title}</b>
-                            <br>${pin.scientific}<br>
-                            <b>Description:</b> ${pin.description}<br>
-                            <b>Medicinal Uses:</b> ${pin.medicinal}<br>
-                            <i>${pin.category}</i>`
-                        );
+                data.forEach(pin => {
 
-                        marker.on("click", () => {
-                            map.setView([pin.lat, pin.lng], 14, { animate: true});
+                    // Create marker
+                    const marker = L.marker([pin.lat, pin.lng]).addTo(map);
+                    const img = `<img src='${pin.img}' class="popup-image">`;
 
-                            setTimeout(() => {
-                                const popup = marker.getPopup();
+                    marker.bindPopup(`
+                        ${img}<br>
+                        <b>${pin.title}</b><br>
+                        ${pin.scientific}<br>
+                        <b>Description:</b> ${pin.description}<br>
+                        <b>Medicinal Uses:</b> ${pin.medicinal}<br>
+                        <i>${pin.category}</i>
+                    `);
 
-                                const popupHeight = popup._container.offsetHeight;
+                    // Auto-pan popup to center
+                    marker.on("click", () => {
+                        map.setView([pin.lat, pin.lng], 14, { animate: true });
 
-                                map.panBy([0, -(popupHeight / 2)],
-                                    { animate: true,
-                                     duration: 0.3
-                                    });
-                            }, 200);
-                        });
+                        setTimeout(() => {
+                            const popup = marker.getPopup();
+                            const popupHeight = popup._container.offsetHeight;
 
-                        markers.push({ title: pin.title.toLowerCase(), marker });
+                            map.panBy([0, -(popupHeight / 2)], {
+                                animate: true,
+                                duration: 0.3
+                            });
+                        }, 200);
                     });
 
-                    //Switch sa Base layer
-                    L.control.layers(
-                        { "OpenStreetMap": openStreetMap, "Satellite": satellite },
-                        {},
-                        { collapsed: false }
-                    ).addTo(map);
-                });
+                    // Add marker to memory
+                    markers.push({ title: pin.title.toLowerCase(), marker, pin });
 
-            document.getElementById("searchBar").addEventListener("keyup", function () {
-                const text = this.value.toLowerCase().trim();
+                    // Add to Sidebar List
+                    const li = document.createElement("li");
+                    li.classList.add("list-group-item");
+                    li.innerHTML = `<strong>${pin.title}</strong> <br><small>${pin.category}</small>`;
 
-                markers.forEach(obj => {
-                    if (obj.title.startsWith(text)) {
-                        obj.marker.setOpacity(1);
-                        obj.marker.openPopup();
-                    } else {
-                        obj.marker.setOpacity(0);
-                    }
+                    li.onclick = () => {
+                        map.setView([pin.lat, pin.lng], 14);
+                        marker.openPopup();
+                    };
+
+                    treeList.appendChild(li);
 
                 });
+
+                // Layer Control
+                L.control.layers(
+                    { "OpenStreetMap": openStreetMap, "Satellite": satellite },
+                    {},
+                    { collapsed: false }
+                ).addTo(map);
+
             });
-        }
 
-        document.addEventListener("DOMContentLoaded", function () {
-            initMap("eco-map.json");
+        // Search Function
+        searchBar.addEventListener("keyup", function () {
+            const text = this.value.toLowerCase().trim();
+            treeList.innerHTML = "";
+
+            markers.forEach(obj => {
+
+                if (obj.title.includes(text)) {
+                    const li = document.createElement("li");
+                    li.classList.add("list-group-item");
+                    li.innerHTML = `<strong>${obj.pin.title}</strong><br><small>${obj.pin.category}</small>`;
+
+                    li.onclick = () => {
+                        map.setView([obj.pin.lat, obj.pin.lng], 14);
+                        obj.marker.openPopup();
+                    };
+
+                    treeList.appendChild(li);
+                }
+            });
+
         });
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        initMap("eco-map.json");
+    });
 
     </script>
 </body>
