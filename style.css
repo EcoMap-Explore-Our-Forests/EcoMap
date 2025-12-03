@@ -6,7 +6,7 @@
 }
 
  #map {
-    height: 590px;
+    height: 589px;
     width: 100%;
 }
 
@@ -35,15 +35,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 12px 20px;
+    padding: 12px 10px;
     background: #5bb663;
-    border-bottom: 2px solid #b6ebb8;
     position: relative;
 }
 
 .logo {
-    height: 95px;
-    width: 95px;
+    height: 70px;
+    width: 70px;
     object-fit: contain;
     position: absolute;
     left: 20px;
