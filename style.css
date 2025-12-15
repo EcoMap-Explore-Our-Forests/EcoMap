@@ -5,10 +5,13 @@
     font-family: Arial, sans-serif;
 }
 
- #map {
-    height: 589px;
+/* Make the map tall */
+#map {
+    height: 820px;
     width: 100%;
 }
+
+
 
 .popup-image {
     max-width: 200px;
@@ -56,4 +59,24 @@
 
 main {
     padding: 20px;
+}
+
+.popup-image {
+    max-width: 200px;
+    height: auto;
+}
+
+/* Simple search bar (NO external CSS) */
+#search-container {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+}
+
+#searchBar {
+    padding: 8px 13px;
+    width: 260px;
+    font-size: 16px;
+    border: 1px solid #aaa;
+    border-radius: 6px;
 }
